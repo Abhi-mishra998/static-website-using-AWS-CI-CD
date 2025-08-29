@@ -1,0 +1,26 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo "🔧 Installing dependencies (if any)..."
+      # If you had npm/yarn builds for frontend, you’d install them here
+      # For a static site with plain HTML/CSS/JS, you can skip
+  pre_build:
+    commands:
+      - echo "✅ Pre-build phase started..."
+      - aws s3 ls
+  build:
+    commands:
+      - echo "🚀 Building the project..."
+      # If you’re just serving static files, you might add minification here
+      # Example (optional): npx minify index.html > index.min.html
+  post_build:
+    commands:
+      - echo "📦 Build is completed. Copying files to S3 bucket..."
+      - aws s3 cp . s3://my-static-website-mishra/ --recursive
+      - echo "🌍 Deployment done! Your static site is live."
+
+artifacts:
+  files:
+    - "**/*"
