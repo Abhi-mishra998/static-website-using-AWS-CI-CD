@@ -18,7 +18,7 @@ phases:
   post_build:
     commands:
       - echo "📦 Build is completed. Copying files to S3 bucket..."
-      - aws s3 cp . s3://my-static-website-mishra/ --recursive
+
       - echo "🌍 Deployment done! Your static site is live."
 
 artifacts:
