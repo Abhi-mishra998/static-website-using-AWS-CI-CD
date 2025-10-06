@@ -1,4 +1,4 @@
-Certainly, Abhishek! Here's a professional README template tailored for your AWS CodePipeline-based static website deployment project. This format is ideal for GitHub repositories, personal portfolios, or resume showcases.
+
 
 ---
 
